@@ -33,9 +33,17 @@ public class Rocket {
         return nose.getYPos();
     }
 
+    protected float getVelocity() {
+        return velocity;
+    }
+
     public void update() {
-        nose.move(0, velocity);
-        body.move(0, velocity);
+        move(0, getVelocity());
+    }
+
+    protected void move(float dx, float dy) {
+        nose.move(dx, dy);
+        body.move(dx, dy);
         guide.setStartAndEndPoint(nose.getXPos(), nose.getYPos(), nose.getXPos(), nose.getYPos() + guideLength);
     }
 

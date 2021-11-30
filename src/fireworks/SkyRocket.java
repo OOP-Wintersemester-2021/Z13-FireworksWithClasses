@@ -11,9 +11,16 @@ public class SkyRocket {
     private boolean gone;
 
     public SkyRocket(int xPos, int yPos, float radius, float guideLength, int fuseTimeInMs, float velocity, Color color) {
-        rocket = new Rocket(xPos, yPos, radius, guideLength, velocity, color);
+        rocket = createRocket(xPos, yPos, radius, guideLength, velocity, color);
         exploded = false;
         remainingFuseTimeInMs = fuseTimeInMs;
+    }
+
+    private Rocket createRocket(int xPos, int yPos, float radius, float guideLength, float velocity, Color color) {
+        if (Math.random() > 0.75) {
+            return new WonkyRocket(xPos, yPos, radius, guideLength, velocity, color);
+        }
+        return new Rocket(xPos, yPos, radius, guideLength, velocity, color);
     }
 
     public void update(long deltaTime) {
