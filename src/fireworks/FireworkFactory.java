@@ -12,8 +12,8 @@ public class FireworkFactory {
     private static final int ROCKET_START_Y_POSITION_OFFSET = 50;
     private static final int ROCKET_MIN_SPEED = 5;
     private static final int ROCKET_MAX_SPEED = 10;
-    private static final float ROCKET_RADIUS = 5;
-    private static final float GUIDE_LENGTH = 60;
+    private static final float ROCKET_RADIUS = 6;
+    private static final float GUIDE_LENGTH = 70;
     private static final float FLARE_RADIUS = 2;
     private static final int NUMBER_OF_FLARES_PER_ROCKET = 10;
     private static final int FLARE_LIFE_TIME = 1000;
